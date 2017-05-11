@@ -25,7 +25,6 @@ for each in link:
 
 print(count)
 
-
 # text_filed = re.findall('class="common">(.*?)<th>', html, re.S)
 # print(text_filed)
 # for each in text_filed:
