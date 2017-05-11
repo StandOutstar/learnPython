@@ -32,3 +32,10 @@ head = tree.xpath('/html/body/div[position()<2]/text()')
 print(head)
 head = tree.xpath('/html/body/div[last()-1]/text()')
 print(head)
+
+# start-with(@id, "test")
+
+# 'string(.)'
+
+# xpath教程
+# http://www.w3school.com.cn/xpath/xpath_functions.asp
