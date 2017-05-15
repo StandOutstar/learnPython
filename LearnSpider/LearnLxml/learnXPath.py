@@ -35,7 +35,7 @@ print(head)
 
 # start-with(@id, "test")
 
-# 'string(.)'
+# 'string(.)' 返回参数的字符串值。参数可以是数字、逻辑值或节点集
 
 # xpath教程
 # http://www.w3school.com.cn/xpath/xpath_functions.asp
