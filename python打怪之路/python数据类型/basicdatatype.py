@@ -10,10 +10,11 @@ print("I'm ok")
 print("I\"m ok")
 
 # 其他转义
-# \n \t \\
+# \n \t \\ %%
 print('hello\nworld!')
 print('hello\tworld!')
 print('hello\\world!')
+print('%d %%' % 70)
 
 # r''表示字符串内部不转义
 print(r'\n')

@@ -9,10 +9,17 @@ import requests
 page = requests.get('http://www.vipjiexi.com/')
 # page = requests.get('http://www.jikexueyuan.com/')
 
-print(page.encoding)
-# 编码转换 ISO-8859-1 -> utf-8
-text = page.text.encode('ISO-8859-1').decode('utf-8')
-print(text)
+print(page.headers)
+page.encoding = 'utf-8'
+text = page.text
+print(page.text)
+
+
+# print(page.encoding)
+# print(page.headers)
+# # 编码转换 ISO-8859-1 -> utf-8
+# text = page.text.encode('ISO-8859-1').decode('utf-8')
+# print(text)
 
 tree = html.fromstring(text)
 # 通过绝对路径取文本
@@ -39,3 +46,4 @@ print(head)
 
 # xpath教程
 # http://www.w3school.com.cn/xpath/xpath_functions.asp
+
