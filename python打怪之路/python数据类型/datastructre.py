@@ -51,7 +51,7 @@ print(d)
 d = {(1, 2, 3): 1, 2: 2}
 print(d)
 # d = {1: 1, (1, [2, 3]): 2}  # TypeError: unhashable type: 'list'
-# 获取元素，通过key,通过get()方法
+# 获取元素，通过key,通过get()方法,get()方法可以设置默认值
 print("d[2]", d[2])
 print("d[2]", d.get('2', -1))
 
@@ -60,6 +60,10 @@ print("d[2]", d.get('2', -1))
 # set 初始化set()，参数要求是一个可迭代的对象 ，比如list
 s = {1, 2, 3}
 print(s)
+
+l = [1, 2, 3]
+s1 = set(l)
+print('s1:', s1)
 # s1 = {1, [2, 3], 4}  # TypeError: unhashable type: 'list'
 # print(s1)
 s2 = {1, (2, 3), 4}
