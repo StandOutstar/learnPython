@@ -29,7 +29,7 @@ print(m1, m2, m3)
 # 关键字参数  **kw
 # 命名关键字参数
 
-# 位置参数
+# 位置参数 可传入参数名也可不传入
 def fun1(i1, i2):
     print(i1, i2)
 
@@ -41,7 +41,7 @@ fun1(i1='1', i2='2')
 print('===========================')
 
 
-# 默认参数
+# 默认参数 默认参数必须指向不变对象！
 def fun2(i1=1, i2=2):
     print(i1, i2)
 
@@ -53,6 +53,69 @@ fun2(i2=1)
 fun2(i1=2, i2=1)
 
 
-#
+# [] l在函数定义时不是指向不变对象，整数，字符串，tuple这些才是不变的对象
+def foo(l=[]):
+    l.append('end')
+    return l
 
+print(foo())
+print(foo())
+print(foo())
+
+
+# 正确的定义方法
+def foo1(l=None):
+    if l is None:
+        l = []
+    l.append('end')
+    return l
+
+print(foo1())
+print(foo1())
+print(foo1())
+
+
+# 可变参数 可以传入list
+def fun3(i1, *args):
+    print('i1:', i1)
+    print('*args:', args)
+
+fun3(1, *[2, 3, 4], *[5, 6])
+# 可变参数的传入方式
+# 1. 组装成list或tuple传入
+li = [1, 2, 3]
+fun3(0, *li)
+fun3(0, *[1, 2, 3])
+# 2. 直接传入
+fun3(0, 1, 2, 3)
+
+
+# 关键字参数 可以传入dict
+def fun4(i1, *args, **kwargs):
+    print('i1:', i1)
+    print('*args:', args)
+    print('**kwargs', kwargs)
+
+# 关键字参数的输入方法：
+# 1. 直接传入
+fun4(0, *[1, 2, 3], *[0, 0], city='2', age='5')
+# 2. 组装成dict传入
+extra = {'city': '2', 'age': '5'}
+fun4(0, *[1, 2, 3], *[0, 0], **extra)
+fun4(0, *[1, 2, 3], *[0, 0], **{'city': '2', 'age': '5'})
+
+
+# 命名关键字参数 明确指出有哪些参数是可接受的，必须传入参数名
+def fun5(i1, *, city, age):
+    print('i1:', i1)
+    print('city:', city)
+    print('age', age)
+
+fun5(1, city='2', age='3')
+
+
+def person(name, age, *args, city, job):
+    print(name, age, args, city, job)
+
+person('Jack', 24, 'Beijing', 'Engineer', city=1, job=2)
 
