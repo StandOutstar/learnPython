@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# 切片是什么？
+# 切片是对一个整体分割取出某部分的行为
 # list tuple str 有切片语法
 
 
