@@ -60,3 +60,24 @@ f1, f2, f3 = count2()
 print(f1())
 print(f2())
 print(f3())
+
+
+# 闭包可以保存当前运行环境
+# 棋盘移动，每次运动的起点都是上次运动结束的终点
+origin = [0, 0]
+
+
+def crate(pos=origin):
+    def go(direction,step):
+        newx = pos[0] + direction[0] * step
+        newy = pos[1] + direction[1] * step
+        pos[0] = newx
+        pos[1] = newy
+        return pos
+    return go
+
+player = crate()
+
+print(player([1, 0], 10))
+print(player([0, 1], 20))
+print(player([-1, 0], 10))
