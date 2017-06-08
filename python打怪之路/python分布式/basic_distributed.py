@@ -25,6 +25,7 @@ def return_result_queue():
 class QueueManager(BaseManager):
     pass
 
+
 def master():
     QueueManager.register('get_task_queue', callable=return_task_queue)
     QueueManager.register('get_result_queue', callable=return_result_queue)
