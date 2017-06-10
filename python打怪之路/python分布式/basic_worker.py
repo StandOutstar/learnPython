@@ -8,6 +8,7 @@ from multiprocessing.managers import BaseManager
 class QueueManager(BaseManager):
     pass
 
+
 def worker():
     # 通过名字注册queue
     QueueManager.register('get_task_queue')
