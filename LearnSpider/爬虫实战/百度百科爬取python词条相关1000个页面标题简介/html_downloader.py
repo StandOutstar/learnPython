@@ -9,6 +9,7 @@ logger=logging.getLogger('infoLogger')
 logger_error=logging.getLogger('errorLogger')
 
 
+# 网页下载器
 class HtmlDownloader(object):
     def html_download(self, url):
         if url is None:

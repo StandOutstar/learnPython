@@ -6,7 +6,7 @@ fileConfig('logging_config.ini')
 logger=logging.getLogger('infoLogger')
 logger_error=logging.getLogger('errorLogger')
 
-
+# 输出器
 class HtmlOutputer(object):
     def __init__(self):
         self.new_data = []

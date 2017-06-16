@@ -15,7 +15,7 @@ logger_error=logging.getLogger('errorLogger')
 # logger.info('test1')
 # logger_error.error('test2')
 
-
+# 页面解析器
 class HtmlParser(object):
     #   python词条url: http://baike.baidu.com/item/Python
     #   相关url: /item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80

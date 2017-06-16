@@ -59,7 +59,8 @@ def printSudentMark(student):
 
 
 class other(object):
-    def print_grade(self):
+    @staticmethod
+    def print_grade():
         print('other')
 oo = other()
 

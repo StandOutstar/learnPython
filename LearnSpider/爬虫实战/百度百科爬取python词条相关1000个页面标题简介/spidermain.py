@@ -19,6 +19,7 @@ logger=logging.getLogger('infoLogger')
 logger_error=logging.getLogger('errorLogger')
 
 
+# 调度器
 class SpiderMain(object):
     def __init__(self):
         self.urls = url_manager.UrlManager()

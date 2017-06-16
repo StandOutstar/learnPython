@@ -6,7 +6,7 @@ fileConfig('logging_config.ini')
 logger=logging.getLogger('infoLogger')
 logger_error=logging.getLogger('errorLogger')
 
-
+# url管理器
 class UrlManager(object):
     def __init__(self):
         self.new_urls = set()
