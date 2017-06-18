@@ -17,7 +17,7 @@ for i in (1, 2, 3):
 
 
 # dict迭代
-for k in {'1': 1, '2': 2}:
+for k in {'a': 1, 'b': 2}:
     print(k)
 
 for v in {'1': 1, '2': 2}.values():
